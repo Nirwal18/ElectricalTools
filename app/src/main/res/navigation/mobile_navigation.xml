@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.nirwal.electricaltools.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_loadCalculatorFragment"
+            app:destination="@id/loadCalculatorFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_notifications"
+            app:destination="@id/navigation_notifications" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_navigation_home_to_screenListFragment"
+            app:destination="@id/screenListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.nirwal.electricaltools.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.nirwal.electricaltools.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <dialog
+        android:id="@+id/inverterCalculatorListDialogFragment"
+        android:name="com.nirwal.electricaltools.ui.bottomsheet.ScreenListBottomSheet"
+        android:label="fragment_inverter_calculator_list_dialog_list_dialog"
+        tools:layout="@layout/bottom_sheet_screen_list" />
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.nirwal.electricaltools.ui.webHost.WebViewFragment"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" />
+    <fragment
+        android:id="@+id/loadCalculatorFragment"
+        android:name="com.nirwal.electricaltools.ui.calculator.LoadCalculatorFragment"
+        android:label="Load calculator"
+        tools:layout="@layout/fragment_load_calculator">
+        <action
+            android:id="@+id/action_loadCalculatorFragment_to_loadResultFragment"
+            app:destination="@id/loadResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadResultFragment"
+        android:name="com.nirwal.electricaltools.ui.calculator.LoadResultFragment"
+        android:label="Load calculation result"
+        tools:layout="@layout/fragment_load_result" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.nirwal.electricaltools.ui.about.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/about_fragment" >
+        <action
+            android:id="@+id/action_aboutFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminHomeFragment"
+        android:name="com.nirwal.electricaltools.ui.admin.home.AdminHomeFragment"
+        android:label="admin_home_fragment"
+        tools:layout="@layout/admin_home_fragment" >
+        <action
+            android:id="@+id/action_adminHomeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_adminHomeFragment_to_uploadAssetsFragment"
+            app:destination="@id/uploadAssetsFragment" />
+        <action
+            android:id="@+id/action_adminHomeFragment_to_catagoryManagerFragment"
+            app:destination="@id/catagoryManagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.nirwal.electricaltools.ui.admin.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_loginOtpFragment"
+            app:destination="@id/loginOtpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginOtpFragment"
+        android:name="com.nirwal.electricaltools.ui.admin.login.LoginOtpFragment"
+        android:label="fragment_login_using_otp"
+        tools:layout="@layout/fragment_login_using_otp" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.nirwal.electricaltools.ui.admin.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/uploadAssetsFragment"
+        android:name="com.nirwal.electricaltools.ui.admin.uploadAssets.UploadAssetsFragment"
+        android:label="fragment_upload_assets"
+        tools:layout="@layout/fragment_upload_assets" />
+    <fragment
+        android:id="@+id/addCatagoryFragment"
+        android:name="com.nirwal.electricaltools.ui.admin.categorymanager.AddCatagoryFragment"
+        android:label="fragment_add_catagory"
+        tools:layout="@layout/fragment_add_catagory" />
+    <fragment
+        android:id="@+id/catagoryManagerFragment"
+        android:name="com.nirwal.electricaltools.ui.admin.categorymanager.CatagoryManagerFragment"
+        android:label="CatagoryManagerFragment" >
+        <action
+            android:id="@+id/action_catagoryManagerFragment_to_addCatagoryFragment"
+            app:destination="@id/addCatagoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/screenListFragment"
+        android:name="com.nirwal.electricaltools.ui.screenList.ScreenListFragment"
+        android:label="fragment_screen_list"
+        tools:layout="@layout/fragment_screen_list" >
+        <action
+            android:id="@+id/action_screenListFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <action
+            android:id="@+id/action_screenListFragment_to_loadCalculatorFragment"
+            app:destination="@id/loadCalculatorFragment" />
+        <action
+            android:id="@+id/action_screenListFragment_self"
+            app:destination="@id/screenListFragment" />
+    </fragment>
+</navigation>

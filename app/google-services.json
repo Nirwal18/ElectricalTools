@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "983103930391",
+    "project_id": "electricaltools-2021",
+    "storage_bucket": "electricaltools-2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983103930391:android:82947ebebbcde50318dc52",
+        "android_client_info": {
+          "package_name": "com.nirwal.electricaltools"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "983103930391-82svjprjltf4013plbth0f2oqc646ea8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFg_ckJGNoARIR26TXy_3EbtCCEBEPx84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "983103930391-82svjprjltf4013plbth0f2oqc646ea8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
